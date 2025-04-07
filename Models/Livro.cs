@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace bibliotecaNhibernate.Models
 {
     public class Livro
@@ -12,9 +7,18 @@ namespace bibliotecaNhibernate.Models
         public int AnoPublicacao { get; set; }
         public Autor Autor { get; set; }
         public Editora Editora { get; set; }
+        
         public Livro()
         {
-            
+
+        }
+
+        public Livro(string titulo, int anoPublicacao, Autor autor, Editora editora)
+        {
+            Titulo = titulo;
+            AnoPublicacao = anoPublicacao;
+            Autor = autor;
+            Editora = editora;
         }
     }
 }

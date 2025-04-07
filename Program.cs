@@ -1,7 +1,4 @@
-﻿using bibliotecaNhibernate.Models;
-using ZstdSharp.Unsafe;
-
-namespace Program
+﻿namespace Program
 {
     class Program
     {
