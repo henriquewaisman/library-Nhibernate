@@ -21,6 +21,9 @@ Você vai criar um banco de dados para armazenar informações sobre livros, seu
 - AnoPublicacao (int, not null)
 - AutorId (int, FK para Autor.Id, not null)
 - EditoraId (int, FK para Editora.Id, not null)
+
+![diagram](https://github.com/henriquewaisman/library-Nhibernate/blob/main/Diagram.png)
+
 </br>
 <h2>🎯 Objetivos </h2>
 
