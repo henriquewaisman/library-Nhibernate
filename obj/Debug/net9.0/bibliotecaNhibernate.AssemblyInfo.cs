@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bibliotecaNhibernate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a27ab4a8a970e35fd9c865a14e24a7bd6b23c30")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f21bd4f26a1b97ddd6f91730d30fa9c5a936636")]
 [assembly: System.Reflection.AssemblyProductAttribute("bibliotecaNhibernate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bibliotecaNhibernate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

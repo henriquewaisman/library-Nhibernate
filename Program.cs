@@ -10,6 +10,7 @@ namespace Program
         {
             ISession session = HibernateUtil.getSession();
             ITransaction transaction = session.BeginTransaction();
+            IQueryable<Livro> query = session.Query<Livro>();
 
             Autor autor = new Autor("Machado de Assis", new DateTime(1839, 06, 21));
             Autor autor1 = new Autor("Clarice Lispector");
@@ -43,6 +44,35 @@ namespace Program
             session.Save(livro3);
             session.Save(livro4);
             session.Save(livro5);
+
+            query = query.Where(l => l.Autor.Nome ==  "Machado de Assis");
+            IList<Livro> livros = query.ToList();
+
+            foreach(var l in livros)
+            {
+                Console.WriteLine($"{l.Titulo} - {l.Autor.Nome}");
+            }
+
+            query = query.Where(l => l.Editora.Nome == "Editora Rocco");
+            IList<Livro> editoras = query.ToList();
+
+            Console.WriteLine($"Livros da Editora Rocco");
+            foreach(var l in editoras)
+            {
+                Console.WriteLine($"{l.Titulo} - {l.Autor.Nome}");
+            }
+
+            DateTime cutoff = new DateTime(1900, 1, 1);
+            var autores = query
+                .Where(l => l.Autor.DataNascimento < cutoff)
+                .Select(l => l.Autor)
+                .Distinct()
+                .ToList();
+
+            foreach(var l in autores)
+            {
+                Console.WriteLine($"{l.Nome}");
+            };
 
             transaction.Commit();
         }
