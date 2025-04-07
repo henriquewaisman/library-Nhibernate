@@ -2,10 +2,10 @@ namespace bibliotecaNhibernate.Models
 {
     public class Autor
     {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public DateTime? DataNascimento{ get; set; }
-
+        public virtual int Id { get; set; }
+        public virtual string Nome { get; set; }
+        public virtual DateTime? DataNascimento{ get; set; }
+        public virtual IList<Livro> Livros { get; set; }
         public Autor()
         {
 

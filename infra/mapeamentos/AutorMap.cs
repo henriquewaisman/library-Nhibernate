@@ -12,6 +12,7 @@ namespace bibliotecaNhibernate.infra.mapeamentos
             Id(autor => autor.Id).Column("ID");
             Map(autor => autor.Nome).Column("NOME");
             Map(autor => autor.DataNascimento).Column("DATANASCIMENTO");
+            HasMany(autor => autor.Livros).KeyColumn("IDAUTOR");
         }
     }
 }

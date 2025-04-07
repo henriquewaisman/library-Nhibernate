@@ -2,10 +2,10 @@ namespace bibliotecaNhibernate.Models
 {
     public class Editora
     {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string? Cidade { get; set; }
-
+        public virtual int Id { get; set; }
+        public virtual string Nome { get; set; }
+        public virtual string? Cidade { get; set; }
+        public virtual IList<Livro> Livros { get; set; }
         public Editora()
         {
 

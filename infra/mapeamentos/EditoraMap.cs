@@ -12,6 +12,7 @@ namespace bibliotecaNhibernate.infra.mapeamentos
             Id(editora => editora.Id).Column("ID");
             Map(editora => editora.Nome).Column("NOME");
             Map(editora => editora.Cidade).Column("CIDADE");
+            HasMany(editora => editora.Livros).KeyColumn("IDEDITORA");
         }
     }
 }
